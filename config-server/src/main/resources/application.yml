@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xueshuiyy/spring-cloud-config-center.git
+          search-paths: clientconfig
+          username: xueshuiyy
+          password:
+      label: master
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: linRabbit
+    username: guest
+    password: guest
+    connection-timeout: 10000
+    template:
+      mandatory: true
+server:
+  port: 8888

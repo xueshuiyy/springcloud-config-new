@@ -1,0 +1,12 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: eureka-provider1
+  client:
+    service-url:
+      defaultZone: http://www.lin.com:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #开启所有的端点

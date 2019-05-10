@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888/
+      profile: prd
+      label: master
+  application:
+    name: config-client-bus-apply
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: linRabbit
+    username: guest
+    password: guest
+    connection-timeout: 10000
+    template:
+      mandatory: true
